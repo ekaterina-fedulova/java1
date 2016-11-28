@@ -3,28 +3,28 @@ package ru.stqa.pft.sandbox;
 public class MyFirstProgram {
 
   public static void main(String[] args) {
-    hello("world");
-    hello("user");
-    hello("katya");
 
-    double l = 5;
-    System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
-    double a = 4;
-    double b = 6;
-    System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+    Point1 p1 = new Point1(5,2);
+    Point2 p2 = new Point2(4,6);
+
+    System.out.println("answer =  " + distance4(p1, p2));
 
   }
 
-    public static void hello(String somebody) {
-      System.out.println("Hello, " + somebody + "!");
-    }
+  public static double distance1(Point1 p1, Point2 p2) {
+    return (p2.x2 - p1.x1) * (p2.x2 - p1.x1);
+  }
 
-    public static double area(double len) {
-      return len * len;
-    }
+  public static double distance2(Point1 p1, Point2 p2) {
+    return (p2.y2 - p1.y1) * (p2.y2 - p1.y1);
+  }
 
-    public static double area(double a, double b) {
-      return a * b;
-    }
+  public static double distance3(Point1 p1, Point2 p2) {
+    return distance1(p1, p2) + distance2(p1, p2);
+  }
+
+  public static double distance4(Point1 p1, Point2 p2) {
+    return Math.sqrt(distance3(p1, p2));
+  }
 
 }
