@@ -37,4 +37,12 @@ public class ContactHelper extends HelperBase1 {
   public void gotoHomePage() {
     wd.findElement(By.linkText("home")).click();  // потому что контакты отображаются на home
   }
+
+  public void initContactModification() {
+    wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img")).click();
+  }
+
+  public void submitContactModification() {
+    wd.findElement(By.name("update")).click();
+  }
 }
