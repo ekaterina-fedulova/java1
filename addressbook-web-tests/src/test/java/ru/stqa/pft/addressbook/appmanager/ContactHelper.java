@@ -49,11 +49,19 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.linkText("home")).click();  // потому что контакты отображаются на home
   }
 
-  public void initContactModification() {  // добавлен тест длямодификации контакта
+  public void initContactModification() {  // добавлен тест для модификации контакта
     wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img")).click();
   }
 
   public void submitContactModification() {
     wd.findElement(By.name("update")).click();
+  }
+
+  public void createContact(ContactData contact) {
+    fillContactForm (contact, true);
+    Return();
+  }
+  public boolean isThereAContact() {
+    return isElementPresent(By.name("selected[]"));
   }
 }
