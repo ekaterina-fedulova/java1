@@ -1,4 +1,5 @@
 package ru.stqa.pft.addressbook.model;
+// данные для ввода в форму
 
 public class ContactData {
   private final String firstName;
