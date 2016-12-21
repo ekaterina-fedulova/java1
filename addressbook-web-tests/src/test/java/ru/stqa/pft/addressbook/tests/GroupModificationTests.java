@@ -1,5 +1,5 @@
 package ru.stqa.pft.addressbook.tests;
-
+// тест модификации групп
 
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.GroupData;

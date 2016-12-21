@@ -38,7 +38,7 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.linkText("home")).click();  // потому что контакты отображаются на home
   }
 
-  public void initContactModification() {
+  public void initContactModification() {  // добавлен тест длямодификации контакта
     wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img")).click();
   }
 

@@ -38,7 +38,7 @@ public class GroupHelper extends HelperBase{
 
   public void initGroupModification() {
     click(By.name("edit"));
-  }
+  } // добавлен тест для модификации групп
 
   public void submitGroupModification() {
     click(By.name("update"));
