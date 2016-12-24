@@ -57,7 +57,7 @@ public class ContactHelper extends HelperBase {
     wd.findElement(By.linkText("home")).click();  // потому что контакты отображаются на home
   }
 
-  public void initContactModification(int id) {  // добавлен тест для модификации контакта
+  public void initContactModification() {  // добавлен тест для модификации контакта
     wd.findElement(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img")).click();
   }
 
@@ -84,7 +84,7 @@ public class ContactHelper extends HelperBase {
       for (WebElement element : elements) {
         String firstName = element.getText();
         String lastName = element.getText();
-        String id = element.findElement(By.tagName("input")).getAttribute("id");
+        int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("id"));
         ContactData contact = new ContactData(id, firstName, lastName, null, null, null);
         contacts.add(contact);
       }
