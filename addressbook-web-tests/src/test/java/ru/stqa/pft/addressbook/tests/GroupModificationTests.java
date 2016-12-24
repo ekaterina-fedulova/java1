@@ -1,5 +1,5 @@
 package ru.stqa.pft.addressbook.tests;
-// тест модификации групп
+// 10 задание
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

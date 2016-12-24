@@ -1,4 +1,5 @@
 package ru.stqa.pft.addressbook.model;
+// 10 задание
 
 public class GroupData {
 

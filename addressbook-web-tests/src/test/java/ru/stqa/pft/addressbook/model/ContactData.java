@@ -1,6 +1,5 @@
 package ru.stqa.pft.addressbook.model;
-// данные для ввода в форму
-
+// 10 задание
 
 public class ContactData {
   private int id;
